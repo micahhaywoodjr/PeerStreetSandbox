@@ -1,0 +1,32 @@
+<apex:page controller="CpanLoanDashboard" showHeader="false">
+  <table width="100%">
+    <tr>
+      <td>
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#ffffff; height: 150px;text-align:center">
+                <div style="background-color:#66CC33; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 9px;position: relative;color: white;font-size: 20px;">CURRENTY AVAILABLE</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5b6770"><apex:outputField value="{!OCurrentlyAvailable.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5b6770;font-size: 14px;">{!CurrentlyAvailableCount} loans</span></p>
+            </div>
+              </a>
+      </td>
+      <!--
+      <td style="width:16.6%" >
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#FFDDEE; height: 150px;text-align:center">
+                <div style="background-color:#800040; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 16px;">CLOSED</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"><apex:outputField value="{!OClosed.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!ClosedCount} loans</span></p>
+            </div>
+              </a>
+      </td>
+      -->
+    </tr>
+    
+    </table>
+  
+</apex:page>

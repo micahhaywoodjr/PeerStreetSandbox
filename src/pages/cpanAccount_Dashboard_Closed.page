@@ -1,0 +1,20 @@
+<apex:page controller="CpanLoanDashboard" showHeader="false">
+  <table width="100%">
+    <tr>
+        <td>
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#FFffFF;   height: 150px;text-align:center">
+                <div style="background-color:#52A329; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">CLOSED</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5b6770"><apex:outputField value="{!OClosed.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5b6770;font-size: 14px;">{!ClosedCount} loans</span></p>
+            </div>
+              </a>
+      </td>
+      
+    </tr>
+    
+    </table>
+  
+</apex:page>

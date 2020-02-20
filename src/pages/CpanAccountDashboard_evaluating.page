@@ -1,0 +1,22 @@
+<apex:page controller="CpanLoanDashboard" showHeader="false">
+  <table width="100%">
+    <tr>
+      
+      <td>
+            <a href="#" style="text-decoration: initial;">
+                <div style="background-color:#FFffFF; height: 150px;text-align:center">
+                <div style="background-color:#EFB92C; height: 50px; text-align:center;">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">EVALUATING</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5b6770"> <apex:outputField value="{!OEvaluating.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5b6770;font-size: 14px;">{!evaluatingCount} loans</span></p>
+                </div>
+            </a>
+      </td>
+      
+      
+    </tr>
+    
+    </table>
+  
+</apex:page>

@@ -1,0 +1,41 @@
+<apex:page controller="cpanCalculateWeightedAverage" >
+<style type="text/css">
+        .myClass { width: 400px; }
+    </style>
+  <apex:form >
+  
+  
+      <apex:PageBlock title="Calculate Weighted Average" >
+      <apex:pageMessages id="showmsg"></apex:pageMessages>
+          <apex:pageBlockSection >
+          
+              <apex:inputField value="{!objLoan.Property_Type__c}"/>
+              <apex:inputField value="{!objLoan.Originator__c}" required="false"/>
+              <apex:selectList value="{!selectedstatus}" multiselect="true" size="10" label="Select Status">
+                <apex:selectOptions value="{!lstStatus}"/>  
+              </apex:selectList>
+              </apex:pageblockSection>
+              <apex:pageblockSection >
+              <apex:inputField value="{!objLoan.Date_of_Note__c}" label="Initial Purchase Date (Min)" />
+              <apex:inputField value="{!objLoan.Coming_Soon_Date__c}" label="Initial Purchase Date (Max)" />
+              
+             
+              <apex:inputField value="{!objLoan.PS_Close_Date__c}" label="PS Close/Interest Accrual Date (Min)"/>
+              <apex:inputField value="{!objLoan.Date_of_Deed_of_Trust__c}" label="PS Close/Interest Accrual Date (Max)"/>
+              
+             
+              <apex:inputField value="{!objLoan.Paid_Off_Date__c}" label="Paid Off Date (Min)"/>
+              <apex:inputField value="{!objLoan.Loan_Maturity_Date__c}" label="Paid Off Date (Max)"/>
+
+              <apex:selectList value="{!selectedstatus1}" multiselect="true" size="6" label="Select State">
+                <apex:selectOptions value="{!lstStatus1}"/>  
+              </apex:selectList>
+              <apex:inputField value="{!objLoan.PS_ID__c}" label="PS ID (Not Contain)"/>
+          </apex:pageBlockSection>
+          <apex:commandButton value="Generate Report" action="{!CalculateWeight}"/>
+      </apex:PageBlock>
+      <apex:outputPanel id="outpanel1">
+      <apex:outputText value="{!Query}"/>
+      </apex:outputPanel>
+  </apex:form>
+</apex:page>

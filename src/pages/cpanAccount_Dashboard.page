@@ -1,0 +1,87 @@
+<apex:page standardController="Account" showHeader="false" extensions="cpanAccount_Dasbhoard" action="{!CalculateLoans}">
+  
+    <table style="width:100%;" cellspacing="40px">
+    <tr>
+      
+      <td style="background-color:#FFFFF; width:16.6%">
+            <a href="#" style="text-decoration: initial;">
+                <div style="background-color:#FFFFF; height: 150px;text-align:center">
+                <div style="background-color:#EFB92C; height: 50px; text-align:center;">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">EVALUATING</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"> <apex:outputField value="{!OEvaluating.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!evaluatingCount} loans</span></p>
+                </div>
+            </a>
+      </td>
+      
+      
+      <td style="width:16.6%">
+            <a href="#" style="text-decoration: initial;">
+                <div style="background-color:#FFFFF; height: 150px;text-align:center">
+                <div style="background-color:#FF7700; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">QUALIFIED</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"><apex:outputField value="{!OQualified.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!QualifiedCount} loans</span></p>
+                </div>
+            </a>
+      </td>
+      
+      <td style="width:16.6%">
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#FFFFF; height: 150px;text-align:center">
+                <div style="background-color:#3399FF; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">DUE DILIGENCE</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"><apex:outputField value="{!ODuediligence.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!DuediligenceCount} loans</span></p>
+            </div>
+         </a>
+      </td>
+      <td style="width:16.6%">
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#FFFFF; height: 150px;text-align:center">
+                <div style="background-color:#5B6770; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">COMING SOON</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"><apex:outputField value="{!OComingSoon.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!ComingSoonCount} loans</span></p>
+            </div>
+              </a>
+      </td>
+      <td style="width:16.6%" >
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#FFFFF; height: 150px;text-align:center">
+                <div style="background-color:#66CC33; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">CURRENTY AVAILABLE</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"><apex:outputField value="{!OCurrentlyAvailable.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!CurrentlyAvailableCount} loans</span></p>
+            </div>
+              </a>
+      </td>
+      <td style="width:16.6%" >
+          <a href="#" style="text-decoration: initial;">
+            <div style="background-color:#FFFFF; height: 150px;text-align:center">
+                <div style="background-color:#52A329; height: 50px; text-align:center; vertical-align:middle; vertical-align:central">
+                    <span style="top: 15px;position: relative;color: white;font-size: 20px;">CLOSED</span >
+                </div>
+                <p><span style="position: relative;font-size: 24px;top:8px; color:#5C6972"><apex:outputField value="{!OClosed.Amount}"/></span></p>
+                <p><span style="position: relative;color: #5C6972;font-size: 14px;">{!ClosedCount} loans</span></p>
+            </div>
+              </a>
+      </td>
+    </tr>
+    
+    </table>
+  
+  <!--
+  Evaluating: {!evaluating}<br/>
+  Qualified: {!Qualified}<br/>
+  Duediligence: {!Duediligence}<br/>
+  Comingsoon: {!ComingSoon}<br/>
+  CurrentlyAvailable: {!CurrentlyAvailable}<br/>
+  Closed: {!Closed}<br/>
+  -->
+</apex:page>
